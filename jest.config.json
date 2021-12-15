@@ -1,0 +1,14 @@
+{
+  "preset": "ts-jest/presets/js-with-ts-esm",
+  "testEnvironment": "node",
+  "globals": {
+    "ts-jest": {
+      "useESM": true
+    }
+  },
+  "transformIgnorePatterns": ["/node-modules/(?!unified).+\\.js"],
+  "clearMocks": true,
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageProvider": "v8"
+}

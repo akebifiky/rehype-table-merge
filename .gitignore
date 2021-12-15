@@ -132,4 +132,5 @@ dist
 # Local History for Visual Studio Code
 .history/
 
-
+# Built files
+lib/

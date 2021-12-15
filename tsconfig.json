@@ -4,9 +4,12 @@
     "moduleResolution": "node",
     "module": "ES2020",
     "target": "ES2020",
-    "outDir": "./dist",
+    "outDir": "./lib/esm",
     "esModuleInterop": true,
-    "allowJs": true
+    "allowJs": true,
+    "declaration": true,
+    "baseUrl": "./src"
   },
   "include": ["./src/**/*.ts"],
+  "exclude": ["**/*.test.ts"]
 }

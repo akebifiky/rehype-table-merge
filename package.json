@@ -1,13 +1,22 @@
 {
   "name": "rehype-table-merge",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "exports": {
+    "import": "./lib/esm/index.js",
+    "require": "./lib/cjs/index.js",
+    "node": "./lib/esm/index.js",
+    "default": "./lib/cjs/index.js"
+  },
   "scripts": {
     "test": "jest",
-    "clean": "rimraf dist/**/*",
-    "build": "tsc",
+    "clean": "rimraf lib/**/*",
+    "build": "npm-run-all build:esm build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "rollup -c",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts"
   },
@@ -15,11 +24,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.1",
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.13",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
+    "cjstoesm": "^1.1.4",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "hast": "^1.0.0",
@@ -31,9 +43,14 @@
     "rehype-parse": "^8.0.3",
     "rehype-stringify": "^9.0.2",
     "rimraf": "^3.0.2",
+    "rollup": "^2.61.1",
+    "rollup-plugin-typescript2": "^0.31.1",
     "ts-jest": "^27.1.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4",
     "unified": "^10.1.1"
+  },
+  "dependencies": {
+    "hast-util-select": "^5.0.1"
   }
 }
