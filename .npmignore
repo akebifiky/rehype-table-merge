@@ -1,0 +1,8 @@
+src
+.eslintrc.json
+.prettierrc.json
+.giattributes
+.eslintrc.json
+jest.config.json
+rollup.config.js
+tsconfig.json

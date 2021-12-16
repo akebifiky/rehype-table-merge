@@ -12,6 +12,9 @@
     "node": "./lib/esm/index.js",
     "default": "./lib/cjs/index.cjs"
   },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "jest",
     "clean": "rimraf lib/**/*",
@@ -19,7 +22,8 @@
     "build:esm": "tsc",
     "build:cjs": "rollup -c",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint --fix src/**/*.ts"
+    "lint:fix": "eslint --fix src/**/*.ts",
+    "prepublishOnly": "npm-run-all clean build"
   },
   "keywords": [
     "rehype",
