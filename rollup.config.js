@@ -9,7 +9,7 @@ import { cjsToEsm } from "cjstoesm";
 export default {
   input: "src/index.ts",
   output: {
-    dir: "lib/cjs",
+    file: "lib/cjs/index.cjs",
     format: "cjs",
     exports: "auto",
   },
