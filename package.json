@@ -1,6 +1,6 @@
 {
   "name": "rehype-table-merge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rehype plugin for merging cells of table elements.",
   "type": "module",
   "main": "lib/cjs/index.cjs",
