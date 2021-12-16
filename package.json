@@ -1,8 +1,9 @@
 {
   "name": "rehype-table-merge",
-  "version": "0.1.0",
-  "description": "",
-  "main": "lib/cjs/index.js",
+  "version": "1.0.0",
+  "description": "A rehype plugin for merging cells of table elements.",
+  "type": "module",
+  "main": "lib/cjs/index.cjs",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
   "exports": {
@@ -20,9 +21,15 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "rehype",
+    "remark",
+    "table",
+    "merge",
+    "docusaurus"
+  ],
+  "author": "akebifiky",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.1",
